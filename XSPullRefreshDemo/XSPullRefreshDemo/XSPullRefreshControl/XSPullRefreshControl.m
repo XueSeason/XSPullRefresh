@@ -7,7 +7,7 @@
 //
 
 #import "XSPullRefreshControl.h"
-//#import "XSActivityView.h"
+#import "XSActivityView.h"
 
 static const CGFloat defaultHeight  = 100.0f;
 static const CGFloat springTreshold = 120.0f;
@@ -18,7 +18,7 @@ static const CGFloat animationVelosity = 0.8f;
 
 @interface XSPullRefreshControl ()
 @property (weak, nonatomic) UIScrollView *scrollView;
-//@property (strong, nonatomic) XSActivityView *activityView;
+@property (strong, nonatomic) XSActivityView *activityView;
 @end
 
 @implementation XSPullRefreshControl
@@ -33,7 +33,8 @@ static const CGFloat animationVelosity = 0.8f;
 }
 
 - (void)setup {
-//    [self addSubview:self.activityView];
+    self.activityView = [XSActivityView new];
+    [self addSubview:self.activityView];
 }
 
 #pragma mark - public methods
@@ -48,16 +49,18 @@ static const CGFloat animationVelosity = 0.8f;
 - (void)beginRefreshing {
     self.scrollView.contentInset = UIEdgeInsetsMake(defaultHeight, 0, 0, 0);
     [self.scrollView setContentOffset:CGPointMake(0, -defaultHeight) animated:YES];
+    [self.activityView startEclipse];
 }
 
 - (void)endRefreshing {
     [self returnDefaultState];
+    [self.activityView stopEclipse];
 }
 
 #pragma mark - private methods
 - (void)calculate {
     self.frame = CGRectMake(0, 0, CGRectGetWidth(self.scrollView.frame), self.scrollView.contentOffset.y);
-    
+    self.activityView.frame = self.bounds;
     // 开始拖动超过默认高度
     if (self.scrollView.contentOffset.y <= -defaultHeight) {
         
@@ -68,7 +71,6 @@ static const CGFloat animationVelosity = 0.8f;
         }
         
         // 执行具体下拉动画操作
-        
     }
     
     if (!self.scrollView.dragging && self.scrollView.decelerating) {
