@@ -8,36 +8,26 @@
 
 #import "XSTableViewController.h"
 
-@interface XSTableViewController ()
+#import "XSPullRefreshControl.h"
 
+@interface XSTableViewController ()
+@property (strong, nonatomic) XSPullRefreshControl *pullRefreshControl;
 @end
 
 @implementation XSTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"%.2f", self.tableView.contentOffset.y);
-}
-
-- (void)setupRefreshControl {
-    
+    self.pullRefreshControl = [[XSPullRefreshControl alloc] init];
+    [self.pullRefreshControl attachToScrollView:self.tableView];
 }
 
 - (void)controlDidStartAnimation {
-    
+
 }
 
 - (IBAction)endAnimationHandle {
-    
+    [self.pullRefreshControl endRefreshing];
 }
 
 @end

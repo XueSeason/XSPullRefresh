@@ -16,6 +16,7 @@
 		B13E5ECB1C1321F000FCB95D /* XSPullRefreshDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B13E5ECA1C1321F000FCB95D /* XSPullRefreshDemoUITests.m */; };
 		B13E5EDB1C13226500FCB95D /* XSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13E5EDA1C13226500FCB95D /* XSTableViewController.m */; };
 		B13E5EDE1C13253C00FCB95D /* XSPullRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B13E5EDD1C13253C00FCB95D /* XSPullRefreshControl.m */; };
+		B13E5EE11C13C97C00FCB95D /* XSActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = B13E5EE01C13C97C00FCB95D /* XSActivityView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		B13E5EDA1C13226500FCB95D /* XSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSTableViewController.m; sourceTree = "<group>"; };
 		B13E5EDC1C13253C00FCB95D /* XSPullRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSPullRefreshControl.h; sourceTree = "<group>"; };
 		B13E5EDD1C13253C00FCB95D /* XSPullRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSPullRefreshControl.m; sourceTree = "<group>"; };
+		B13E5EDF1C13C97C00FCB95D /* XSActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSActivityView.h; sourceTree = "<group>"; };
+		B13E5EE01C13C97C00FCB95D /* XSActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSActivityView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 			children = (
 				B13E5EDC1C13253C00FCB95D /* XSPullRefreshControl.h */,
 				B13E5EDD1C13253C00FCB95D /* XSPullRefreshControl.m */,
+				B13E5EDF1C13C97C00FCB95D /* XSActivityView.h */,
+				B13E5EE01C13C97C00FCB95D /* XSActivityView.m */,
 			);
 			path = XSPullRefreshControl;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13E5EE11C13C97C00FCB95D /* XSActivityView.m in Sources */,
 				B13E5EAA1C1321F000FCB95D /* AppDelegate.m in Sources */,
 				B13E5EDE1C13253C00FCB95D /* XSPullRefreshControl.m in Sources */,
 				B13E5EDB1C13226500FCB95D /* XSTableViewController.m in Sources */,
