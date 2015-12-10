@@ -17,4 +17,4 @@ Weibo: [XueSeason](http://weibo.com/smartseason)
 
 ## License
 
-MaterialDesignKit is released under the MIT license. See LICENSE for details.
+XSPullRefreshDemo is released under the MIT license. See LICENSE for details.
