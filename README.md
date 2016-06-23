@@ -1,4 +1,4 @@
-# XSPullRefreshDemo
+# XSPullRefresh
 An eclipse refresh view.
 
 ## Showcase
