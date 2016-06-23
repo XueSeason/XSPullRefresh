@@ -17,4 +17,4 @@ Weibo: [XueSeason](http://weibo.com/smartseason)
 
 ## License
 
-XSPullRefreshDemo is released under the MIT license. See LICENSE for details.
+XSPullRefresh is released under the MIT license. See LICENSE for details.
